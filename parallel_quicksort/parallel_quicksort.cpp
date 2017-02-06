@@ -1,10 +1,12 @@
 #include "stdafx.h"
+#include <iostream>
 #include <list>
+
+#include "sorter.hpp"
 
 int main()
 {
 	std::list<int> li;
-	std::list<int> li_r;
 
 	li.push_front(3);
 	li.push_front(1);
@@ -12,7 +14,7 @@ int main()
 	li.push_front(7);
 	li.push_front(9);
 
-	std::list<int> li_r = parallel_quick_sort<int>(li);
+	std::list<int> li_r = parallel_quick_sort<int>(std::move(li));
 
 	std::cout << "test";
 	return 0;
