@@ -14,7 +14,7 @@ int main()
 	li.push_front(7);
 	li.push_front(9);
 
-	std::list<int> li_r = parallel_quick_sort<int>(std::move(li));
+	std::list<int> li_r = parallel_quick_sort<int>(li);
 
 	std::cout << "test";
 	return 0;
